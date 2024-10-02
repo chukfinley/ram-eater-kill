@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROCENT=70
+PROCENT=60
 SECOUNDS=1
 
 # Function to send notification
