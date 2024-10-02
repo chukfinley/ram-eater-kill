@@ -1,0 +1,11 @@
+[Unit]
+Description=RAM Monitor and Kill Service
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/ram_monitor.sh
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
