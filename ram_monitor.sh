@@ -1,5 +1,8 @@
 #!/bin/bash
 
+PROCENT=70
+SECOUNDS=1
+
 # Function to send notification
 send_notification() {
     # Get the user running the desktop session
@@ -23,7 +26,7 @@ while true; do
     # Calculate RAM usage percentage
     ram_usage=$((used_ram * 100 / total_ram))
 
-    if [ $ram_usage -ge 70 ]; then
+    if [ $ram_usage -ge $PROCENT ]; then
         # Find the process using the most RAM
         top_process=$(ps aux --sort=-%mem | awk 'NR==2 {print $2 " " $11}')
         pid=$(echo $top_process | cut -d' ' -f1)
@@ -40,5 +43,5 @@ while true; do
     fi
 
     # Sleep for 1 minute before checking again
-    sleep 1
+    sleep $SECOUNDS
 done
