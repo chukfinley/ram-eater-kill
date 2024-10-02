@@ -12,7 +12,7 @@ This project provides a system service that monitors RAM usage and automatically
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/ram-monitor.git
+   git clone https://github.com/chukfinley/ram-eater-kill.git
    cd ram-monitor
    ```
 
